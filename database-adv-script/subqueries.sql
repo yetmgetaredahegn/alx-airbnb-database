@@ -1,19 +1,19 @@
 SELECT *
 FROM "Property"
-where property_id in (
-	select property_id 
-	from "Review" r 
-	group by property_id
-	having  AVG(r.rating ) > 4
+WHERE property_id in (
+	SELECT property_id 
+	FROM "Review" r 
+	GROUP BY property_id
+	HAVING  AVG(r.rating ) > 4
 );
 
 
-select *
-from  "User" u 
-where (
-	select count(*)
-	from "Booking" b 
-	where b.user_id   = u.user_id 
+SELECT *
+FROM  "User" u 
+WHERE (
+	SELECT COUNT(*)
+	FROM "Booking" b 
+	WHERE b.user_id   = u.user_id 
 ) > 3;
 
 
