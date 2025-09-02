@@ -31,8 +31,8 @@ SELECT
     r.created_at AS review_date
 FROM "Property" p
 LEFT JOIN "Review" r
-    ON p.property_id = r.property_id;
-
+    ON p.property_id = r.property_id
+ORDER BY p.propert_id ASC; 
 
 SELECT 
     b.booking_id,
