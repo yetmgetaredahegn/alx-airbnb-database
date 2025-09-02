@@ -10,7 +10,7 @@ SELECT
     u.email,
     u.phone_number
 FROM "Booking" b
-JOIN "User" u
+inner join "User" u
     ON b.user_id = u.user_id;
 
 
