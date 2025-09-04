@@ -8,7 +8,7 @@ The objective of this task was to optimize queries on the `Booking` table, which
 ## Steps Taken
 
 1. **Renamed Original Table**
-   ```sql
+```sql
    ALTER TABLE "Booking" RENAME TO "Booking_old";
 ```
 - Preserved original data for migration.
@@ -87,3 +87,4 @@ Execution Time: 1.129 ms
 - Existing foreign keys required adjustments to reference the new partitioned parent table, ensuring data integrity.
 
 - Overall, partitioning large tables is effective for performance optimization on date-range queries.
+---
