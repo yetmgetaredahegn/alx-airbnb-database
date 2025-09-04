@@ -11,9 +11,9 @@ The objective of this task was to optimize queries on the `Booking` table, which
    ```sql
    ALTER TABLE "Booking" RENAME TO "Booking_old";
 ```
--Preserved original data for migration.
+- Preserved original data for migration.
 
-C2. **Created Partitioned Parent Table**
+2. **Created Partitioned Parent Table**
 ```sql
 CREATE TABLE "Booking" (
     booking_id   UUID NOT NULL DEFAULT gen_random_uuid(),
